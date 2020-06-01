@@ -14,8 +14,8 @@ RUN python setup.py install
 # install latest CoreNLP release
 WORKDIR /opt
 RUN wget $(grepurl -r 'zip$' -a http://stanfordnlp.github.io/CoreNLP/) && \
-    unzip stanford-corenlp-full-*.zip && \
-    mv $(ls -d stanford-corenlp-full-*/) corenlp && rm *.zip
+    unzip stanford-corenlp-latest.zip && \
+    mv $(ls -d stanford-corenlp-latest/) corenlp && rm *.zip
 
 # install latest English language model
 #
